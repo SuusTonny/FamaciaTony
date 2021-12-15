@@ -1,0 +1,19 @@
+<%- layout('layouts/main') %>
+<br>
+<div class="row mb-5">
+    <div class="col-md-4 offset-md-4">
+      <div class="card text-white bg-dark mt-4 text-center">
+        <div class="card-header" ><h4>Agregar medicina al inventario</h4></div>
+        <div class="card-body" >
+            <form action="/agregar-medicina" method="POST">
+                <div class="form-group mb-3"><input type="text" name="Nombre" placeholder="nombre" class="form-control"></div> 
+                <div class="form-group mb-3"><input type="text" name="Marca" placeholder="marca" class="form-control"></div>  
+                <div class="form-group mb-3"><input type="text" name="Lote" placeholder="lote" class="form-control"></div>  
+                <div class="form-group mb-3"><input type="text" name="Fecha_caducidad" placeholder="fecha de caducidad" class="form-control"></div> 
+                <div class="form-group mb-3"><input type="text" name="Existencia" placeholder="existencia" class="form-control"></div> 
+                <div class="form-group mb-3 d-grid gap-2 col-6 mx-auto"><button type="submit" class="btn btn-success">Guardar</button></div>                                           
+            </form>
+        </div>
+      </div>
+    </div>
+</div>

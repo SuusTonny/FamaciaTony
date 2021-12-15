@@ -1,0 +1,21 @@
+<%- layout('layouts/main') %>
+
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+      <div class="card text-white bg-dark mt-4 text-center">
+        <div class="card-header">
+          <h4>Editar medicina</h4>
+        </div>
+        <div class="card-body">
+            <form action="/editar-medicina/<%= editar_m._id %>" method="POST">
+                <div class="form-group mb-3"><input type="text" name="Nombre" value="<%= editar_m.Nombre%>" class="form-control"></div> 
+                <div class="form-group mb-3"><input type="text" name="Marca" value="<%= editar_m.Marca%>" class="form-control"></div>    
+                <div class="form-group mb-3"><input type="text" name="Lote" value="<%= editar_m.Lote%>" class="form-control"></div>
+                <div class="form-group mb-3"><input type="text" name="Existencia" value="<%= editar_m.Existencia%>" class="form-control"></div>
+                <div class="form-group mb-3"><input type="text" name="Fecha_caducidad" value="<%= editar_m.Fecha_caducidad%>" class="form-control"></div>
+                <div class="form-group mb-3 d-grid gap-2 col-6 mx-auto"><button type="submit" class="btn btn-outline-success">Editar</button></div>                                           
+            </form>
+        </div>
+      </div>
+    </div>
+</div>

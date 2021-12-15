@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <title>farmacias</title>
+    <script src="https://kit.fontawesome.com/8c7822d0aa.js" crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="/static/css/estilo.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/"><font face = "Times New Roman">   Farmacia Tony</font></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">  
+            <%if (user) { %> 
+              <li class="nav-item">
+                <a class="nav-link" href="/profile">Perfil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/medicina">Medicina</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/agregar-medicina">Agregar Med.</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/productos">Productos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/agregar-producto">Agregar Prod.</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/logout">Salir</a>
+              </li>
+            <% } else { %>
+            <li class="nav-item">
+              <a class="nav-link" href="/signin">Ingresar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/signup">Registrate</a>
+            </li>  
+            <% } %>          
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <%if (signinMessage.length>0) {%>
+        <div class="alert alert-danger"><%= signinMessage %></div>
+      <% } %>
+      <%if (signupMessage.length>0) {%>
+        <div class="alert alert-danger"><%= signupMessage %></div>
+      <% } %>
+      <%- body %></div>
+   <footer class="w-100  d-flex  align-items-center justify-content-center flex-wrap">
+    <p class="fs-7 px-3  pt-3">Farmacia Tony &copy; Todos Los Derechos Reservados 2021</p>
+  </footer>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+  </html>    

@@ -1,0 +1,35 @@
+{
+  "name": "farmacia",
+  "version": "1.0.0",
+  "description": "Inventario de una Farmacia // Proyecto Final de Computo en la nube del alumnos Jesus Antonio Cisneros Rivera//////",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "^0.0.3",
+    "connect-flash": "^0.1.1",
+    "ejs": "^3.1.6",
+    "ejs-mate": "^3.0.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "mongoose": "^6.1.1",
+    "morgan": "^1.10.0",
+    "passport": "^0.5.0",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/             .git"
+  },
+  "bugs": {
+    "url": "https://github.com/          issues"
+  },
+  "homepage": "https://github.com/       #readme"
+}

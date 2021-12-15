@@ -1,0 +1,33 @@
+<%- layout('layouts/main') %>
+<br>
+<div class="row mb-5"><div class="col-md-8 mx-auto text-center "><h1> <font face = "Times New Roman"> Inventario medicina</font> </h1></div></div><br>
+<table class="table table-hover table-striped table-dark">
+    <thead>
+      <tr>
+        <th scope="col">num</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Marca</th>
+        <th scope="col">Lote</th>
+        <th scope="col">Fecha_caducidad</th>
+        <th scope="col">Existencia</th>
+        <th scope="col"></th></tr>
+    </thead>
+    <tbody>
+        <% for(var i=0; i < medi.length; i++) {%>
+            <tr>
+                <td><%= i+1%></td>
+                <td><%= medi[i].Nombre %></td>
+                <td><%= medi[i].Marca %></td>
+                <td><%= medi[i].Lote %></td>
+                <td><%= medi[i].Fecha_caducidad %></td>
+                <td><%= medi[i].Existencia %></td>
+                <td>
+                    <a href="/delete_m/<%= medi[i]._id %>" class="btn btn-danger btn-sm">Eliminar</a>
+                    <a href="/editar-medicina/<%= medi[i]._id%>" class="btn btn-info btn-sm">Editar</a>
+                </td>
+            </tr>                   
+        <%}%>
+        
+    </tbody>
+  </table>
+  <div class="row mb-5"><div class="col-md-8 mx-auto text-center "><img src="/static/images/pastillas.png"  height="250" width="200"/></div></div>
