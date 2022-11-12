@@ -19,7 +19,7 @@ require('./passport/local-auth');
 app.set('views', path.join(__dirname, 'views'))
 app.engine('ejs', engine);
 app.set('view engine', 'ejs');
-app.listen(3000);
+app.listen(80);
 
 // PARA USAR IMAGENES Y CSS
 app.use('/static', express.static(path.join(__dirname, 'public')));
@@ -51,4 +51,4 @@ app.use((req, res, next) => {
 app.use('/', require('./routes/index'));
 
 //Incio de servidor 
-console.log('SERVIDOR EN PUERTO',3000);
+console.log('SERVIDOR EN PUERTO',80);
